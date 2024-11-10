@@ -1,156 +1,246 @@
-.about-me {
-    background-color: #000000;
+.hero {
+    background-color: #000;
     color: #fff;
-    padding: 2rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
     text-align: center;
 }
 
 .content {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-}
-
-.profile-image img {
-    width: 400px;
-    height: 500px;
-    border-radius: 50%;
-    border: 4px solid #ff6600;
-    margin-right: 50px;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
 }
 
 .text {
-    max-width: 600px;
+    flex: 1;
+    margin-bottom: 30px;
     text-align: left;
 }
 
 .text p {
-    margin-bottom: 2rem;
-    line-height: 2;
-    font-size: large;
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-.download-cv {
+.text h1 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin: 10px 0;
+}
+
+.text h3 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin: 10px 0;
+}
+
+.socialIcons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+
+.socialIcons i {
+    font-size: 24px;
+    color: #ff6600;
+    transition: color 0.3s ease;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+}
+
+.buttons .ContactMe, .buttons .downloadCv {
     background-color: #ff6600;
     color: #fff;
-    padding: 0.5rem 1.5rem;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 2px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    min-width: 150px;
 }
 
-.skills {
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center; 
+}
+
+.stat-box {
+    background-color: #1a1a1a;
+    color: #ff4500;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stat-box h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #ff4500;
+}
+
+.stat-box p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 5px 0 0;
+}
+
+.imageContainer {
+    flex: 1;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem; 
-    margin-bottom: .5rem;
-    margin-left: 16rem;
 }
 
-.skill-card {
-    text-align: center;
-    width: 90px;
-    flex-shrink: 0;
+.profileImage {
+    border-radius: 50%;
+    border: 5px solid #ff6600;
+    box-shadow: 0px 0px 20px rgba(255, 102, 0, 0.5);
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 3rem;
+    height: 500px;
 }
 
-.skill-card .icon {
-    font-size: 2.3rem;
-    color: #ff6600;
+
+.buttons .ContactMe:hover {
+    background-color: #e65c00;
 }
 
-.skill-card p {
-    font-size: 1.2rem;
-    font-weight: bold;
+.buttons .downloadCv:hover {
+    background-color: #ff6600;
+    color: #fff;
 }
 
-@media (max-width: 768px) {
+.socialIcons i:hover {
+    color: #ffd700;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 20px;
+    }
+
     .content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .text {
         text-align: center;
+        margin: 0;
     }
 
-    .profile-image img {
-        width: 200px;
+    .text h1 {
+        font-size: 2rem;
     }
 
-    .skills {
-        gap: 1.5rem;
+    .text h3 {
+        font-size: 1.5rem;
+    }
+
+    .stat-box {
+        width: auto;
+    }
+    .socialIcons {
+        margin-top: 1rem;
+        display: flex;
         justify-content: center; 
+        gap: 15px;
+    }
+ 
+    .stats-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .profileImage {
+        max-width: 250px;
+    }
+    .buttons{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .socialIcons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center; 
+        gap: 15px;
+    }
+
+    .profileImage {
+        max-width: 200px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 480px) {
-    .skills {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .skill-card {
-        width: 60px;
-    }
-
-    .skill-card .icon {
-        font-size: 1.8rem;
-    }
-
-    .skill-card p {
-        font-size: 0.8rem;
-    }
-
-    .profile-image img {
-        width: 250px;
-        height: 350px;
-        border-radius: 50%;
-        border: 4px solid #ff6600;
-    }
-
-    .profile-image {
-        padding-top: 1rem; 
-        padding-left: 2rem;
-    }
-
-    .content {
-        gap: 1rem; 
-    }
-
-    .text p {
-        margin-bottom: 2rem;
-        line-height: 2;
-        font-size: medium;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-        color: #ff6600;
-        margin-bottom: 1rem;
-        margin-top: 6px;
-    }
-
-    .stats-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; 
-        gap: 1rem; 
+    .text h1 {
+        font-size: 1.5rem;
     }
 
     .stat-box {
-        width: 45%;
-        max-width: 150px;
-        margin-bottom: 1rem;
+        width: 80%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .profileImage {
+        max-width: 350px;
+    }
+
+    .socialIcons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center; 
+        gap: 15px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .buttons .ContactMe {
+        width: 100%;
     }
 }
