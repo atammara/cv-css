@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    padding: 20px; /* Added some padding for smaller screens */
+    padding: 20px; 
 }
 
 .content {
@@ -48,7 +48,7 @@
 .socialIcons {
     margin-top: 1rem;
     display: flex;
-    justify-content: start; /* Center icons for all screens */
+    justify-content: start;
     gap: 15px;
 }
 
@@ -63,7 +63,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: start; /* Center buttons for all screens */
+    justify-content: start;
 }
 
 .buttons .ContactMe{
@@ -84,7 +84,7 @@
     gap: 15px;
     margin-top: 30px;
     width: 100%;
-    justify-content: center; /* Center the grid for small screens */
+    justify-content: center;
 }
 
 .stat-box {
@@ -123,7 +123,6 @@
     height: 600px;
 }
 
-/* Button Hover Effects */
 .buttons .ContactMe:hover {
     background-color: #e65c00;
 }
@@ -137,14 +136,13 @@
     color: #ffd700;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
     .hero {
         padding: 20px;
     }
 
     .content {
-        flex-direction: row; /* Row layout for tablets */
+        flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
     }
@@ -173,7 +171,7 @@
 
 @media (max-width: 768px) {
     .content {
-        flex-direction: column; /* Stack image and text vertically */
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
@@ -184,14 +182,14 @@
     }
 
     .stats-container {
-        grid-template-columns: repeat(3, 1fr); /* Two columns for small screens */
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         margin-right: 1rem;
     }
     .socialIcons {
         margin-top: 1rem;
         display: flex;
-        justify-content: center; /* Center icons for all screens */
+        justify-content: center;
         gap: 15px;
     }
 
@@ -212,25 +210,37 @@
     }
 
     .stat-box {
-        width: 80%; /* Full width for very small screens */
+        width: 50%;
     }
 
     .profileImage {
         max-width: 350px;
     }
+ 
+    .content {
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-left: 2%;
+    }
 
     .socialIcons {
     margin-top: 1rem;
     display: flex;
-    justify-content: center; /* Center icons for all screens */
+    justify-content: center;
     gap: 15px;
 }
     .stats-container {
-        grid-template-columns: repeat(3, 1fr); /* Keep two columns on very small screens */
+        grid-template-columns: repeat(1, 1fr);
         gap: 10px;
+       align-items: center;
+       justify-content: center;
+       margin-left: 4rem;
     }
 
-    .buttons .ContactMe, .buttons .downloadCv {
+    .buttons .ContactMe{
         width: 100%;
+        justify-content: center;
     }
 }

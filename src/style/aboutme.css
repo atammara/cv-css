@@ -118,24 +118,21 @@
 }
 
 @media (max-width: 480px) {
-    /* Ensure everything is centered on small screens */
+   
     .content {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
         text-align: center;
     }
 
     .skills {
         gap: 1rem;
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     .skill-card {
-        width: 70px; /* Adjust skill card width */
+        width: 70px;
         flex-grow: 1;
         max-width: 80px;
     }
@@ -154,6 +151,7 @@
         border-radius: 50%;
         border: 4px solid #ff6600;
         margin-bottom: 1.5rem;
+        margin-right: 4rem;
     }
 
     .profile-image {
