@@ -1,0 +1,155 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff; 
+}
+
+.contact-container {
+  background-color: black;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.sub-heading {
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-row {
+  display: flex;
+  gap: 80px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: 1;
+  padding: 10px;
+  background: #0e0d0d;
+  border: none;
+  border-radius: 5px;
+  color: #ddd;
+  font-size: 1em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  max-width: 7rem;
+  background-color: transparent;
+  color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    max-width: 80%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%;
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  button[type="submit"] {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .contact-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    max-width: 80%;
+    padding: 15px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  .sub-heading {
+    font-size: 0.8em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-row {
+    gap: 20px;
+    padding-left: 2rem;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    padding: 8px;
+    font-size: 0.85em;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  button[type="submit"] {
+    padding: 8px 15px;
+    font-size: 0.85em;
+  }
+}

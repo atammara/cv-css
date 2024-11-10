@@ -1,0 +1,130 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6600;
+    margin-left: 20px;
+  }
+  
+  .navLinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLinks a {
+    margin: 0 20px;
+    color: #979393;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks a:hover {
+    color: #ff6600;
+  }
+  
+  .ContactMe {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: medium;
+  }
+  
+  .hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 21px;
+    justify-content: space-between;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #ff6600;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .hamburger {
+      display: flex; 
+    }
+  
+    .navLinks {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #000000;
+      padding: 10px 0;
+      z-index: 1;
+    }
+  
+    .navLinks.open {
+      display: flex;
+    }
+  
+    .navLinks a {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+  
+    .ContactMe {
+      margin: 10px 0;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 20px; 
+      margin-left: 10px;
+    }
+  
+    .navLinks a {
+      margin: 1px 0;
+      font-size: 16px;
+      padding-left: 3rem;
+      padding-top: 1px; 
+    }
+  
+    .ContactMe {
+      font-size: 14px; 
+      padding: 8px 15px;
+    }
+  
+    .hamburger {
+      width: 25px;
+      height: 18px;
+    }
+  
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+    }
+  }
+  
