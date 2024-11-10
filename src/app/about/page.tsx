@@ -13,7 +13,7 @@ const AboutMe = () => {
       <div className="content">
         <div className="profile-image">
           {/* Placeholder for Profile Image */}
-          <Image src="/closeup.avif" alt="Profile" />
+          <Image src="/closeup.avif" width={500} height={300} alt="Profile" />
         </div>
         <div className="text">
           <p>

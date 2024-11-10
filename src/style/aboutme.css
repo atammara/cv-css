@@ -7,9 +7,10 @@
 
 .content {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 8rem;
     margin-bottom: 8px;
     flex-wrap: wrap;
 }
@@ -23,14 +24,14 @@
 }
 
 .text {
-    max-width: 600px;
+    max-width: 900px;
     text-align: left;
 }
 
 .text p {
     margin-bottom: 2rem;
     line-height: 2;
-    font-size: large;
+    font-size: larger;
 }
 
 .download-cv {
@@ -48,9 +49,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem; 
+    gap: 2rem;
     margin-bottom: .5rem;
-    margin-left: 16rem;
 }
 
 .skill-card {
@@ -70,7 +70,7 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .content {
         flex-direction: column;
         align-items: center;
@@ -88,21 +88,56 @@
 
     .skills {
         gap: 1.5rem;
-        justify-content: center; 
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .profile-image img {
+        margin-top: 10px;
+        width: 300px;
+        height: auto;
+        margin-left: 3rem;
+    }
+
+    .skills {
+        gap: 1.5rem;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
-    .skills {
+    /* Ensure everything is centered on small screens */
+    .content {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        gap: 1.5rem; 
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .skills {
+        gap: 1rem;
+        justify-content: center;
         margin-top: 1rem;
     }
 
     .skill-card {
-        width: 0px;
+        width: 70px; /* Adjust skill card width */
+        flex-grow: 1;
+        max-width: 80px;
     }
 
     .skill-card .icon {
@@ -118,21 +153,26 @@
         height: 350px;
         border-radius: 50%;
         border: 4px solid #ff6600;
+        margin-bottom: 1.5rem;
     }
 
     .profile-image {
-        padding-top: 1rem; 
-        padding-left: 2rem;
-    }
-
-    .content {
-        gap: 1rem; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
     }
 
     .text p {
         margin-bottom: 2rem;
         line-height: 2;
         font-size: medium;
+        margin-right: 2rem;
+    }
+
+    .download-cv {
+        width: 60%;
+        margin-right: 2rem;
     }
 
     .subtitle {
