@@ -56,6 +56,7 @@
 .skill-card {
     text-align: center;
     width: 90px;
+    flex-shrink: 0;
 }
 
 .skill-card .icon {
@@ -68,7 +69,7 @@
     font-weight: bold;
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
@@ -86,20 +87,22 @@
     }
 
     .skills {
-        gap: 3rem;
+        gap: 1.5rem;
+        justify-content: center; 
     }
 }
 
 @media (max-width: 480px) {
     .skills {
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem; 
         margin-top: 1rem;
     }
 
     .skill-card {
-        width: 60px;
+        width: 0px;
     }
 
     .skill-card .icon {
@@ -107,7 +110,7 @@
     }
 
     .skill-card p {
-        font-size: .8rem;
+        font-size: 0.8rem;
     }
 
     .profile-image img {
@@ -129,7 +132,7 @@
     .text p {
         margin-bottom: 2rem;
         line-height: 2;
-       font-size: medium;
+        font-size: medium;
     }
 
     .subtitle {
