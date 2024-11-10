@@ -3,6 +3,7 @@ import "../../style/aboutme.css"
 import { DiJavascript1 } from 'react-icons/di';
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 import { FaMicrosoft, FaFigma } from 'react-icons/fa';
+import Image from 'next/image';
 
 
 const AboutMe = () => {
@@ -12,7 +13,7 @@ const AboutMe = () => {
       <div className="content">
         <div className="profile-image">
           {/* Placeholder for Profile Image */}
-          <img src="/closeup.avif" alt="Profile" />
+          <Image src="/closeup.avif" alt="Profile" />
         </div>
         <div className="text">
           <p>
